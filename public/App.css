@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+  background-color: yellow;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 20px black;
+  border-radius: radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: tranform 200ms ease-in;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.card-img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  padding: 1rem;
+}
+
+.card :hover {
+  transform: scale(1.02);
+}
+
+.Heading {
+  margin-bottom: 3rem;
+}
+
+.search-navbar {
+  margin: auto;
+  width: 60%;
+  border: 5px solid #ffff00;
+  padding: 10px;
+}
