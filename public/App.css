@@ -10,7 +10,7 @@ body {
   background-color: yellow;
 }
 
-.App {
+.contents {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
   gap: 2rem;
