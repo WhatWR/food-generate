@@ -1,7 +1,8 @@
 import React from 'react';
+import CardInfo from '../components/CardInfo'
 
 const FoodInfo = () => {
-  return <div></div>;
+  return <CardInfo />;
 };
 
 export default FoodInfo;
