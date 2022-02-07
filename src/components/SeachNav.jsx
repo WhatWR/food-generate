@@ -1,15 +1,15 @@
 import React from 'react';
 
-const SeachNav = () => {
+const SeachNav = (props) => {
     return <div className='search-navbar'>
         <nav className="navbar navbar-light bg-light ">
-            <form className="container-fluid">
-                <div class="input-group">
+            <div className="container-fluid" >
+                <div className="input-group">
                     <span className="input-group-text" id="basic-addon1">🔍</span>
-                    <input type="text" className="form-control" placeholder="Search for Meal..." aria-label="Username" aria-describedby="basic-addon1" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
+                    <input type="text" className="form-control" placeholder="Search for Meal..." aria-label="Username" aria-describedby="basic-addon1" value={props.value} onChange={(e) => props.setValue(e.target.value) }/>
+                    <button className="btn btn-outline-success" type="submit" onClick={props.onClick}>Search</button>
                 </div>
-            </form>
+            </div>
         </nav>
     </div>;
 };
