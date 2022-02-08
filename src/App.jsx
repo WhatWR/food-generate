@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Heading from './components/Heading';
 import FoodInfo from './pages/FoodInfo';
 import Home from './pages/Home';
+import './App.css';
 
 const App = () => {
   return (
