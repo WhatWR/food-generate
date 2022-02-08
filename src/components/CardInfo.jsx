@@ -17,7 +17,7 @@ const CardFoodDetail = () => {
     const [ingredients, setIngredients] = useState([]);
     const [measure, setMeasure] = useState([]);
 
-    const onGetIngredients = (meal) => {
+    const getIngredients = (meal) => {
         for (const [key, value] of Object.entries(meal)) {
             if (key.includes('Ingredient') && value) {
                 setIngredients((prev) => [...prev, value]);
@@ -25,7 +25,7 @@ const CardFoodDetail = () => {
         }
     };
 
-    const onGetMeasure = (meal) => {
+    const getMeasure = (meal) => {
         for (const [key, value] of Object.entries(meal)) {
             if (key.includes('Measure') && value) {
                 setMeasure((prev) => [...prev, value]);
@@ -33,17 +33,17 @@ const CardFoodDetail = () => {
         }
     };
 
-    const onGetMealsFromId = (id) => {
+    const getMealsFromId = (id) => {
         getMealFromId(id).then((res) => {
             const meal = res.meals[0];
             setMeal({ name: meal.strMeal, img: meal.strMealThumb });
-            onGetIngredients(meal);
-            onGetMeasure(meal);
+            getIngredients(meal);
+            getMeasure(meal);
         });
     };
 
     useEffect(() => {
-        onGetMealsFromId(recipeId);
+        getMealsFromId(recipeId);
     }, [recipeId]);
 
     return (
