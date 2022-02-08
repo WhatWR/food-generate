@@ -3,6 +3,7 @@ import { MdCheckBox } from 'react-icons/md';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+
 const getMealFromId = async (recipeId) => {
     const response = await axios
         .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
@@ -47,15 +48,15 @@ const CardFoodDetail = () => {
     }, [recipeId]);
 
     return (
-        <div className='card'>
-            <img src={meal.img} alt='food' />
-            <div className='card-body'>
-                <h1>{meal.name}</h1>
-                <h4>Ingredients</h4>
+        <div className='card-info'>
+            <img className='img-info' src={meal.img} alt='food' className='img-info' />
+            <div className='card-body-info'>
+                <h1 >{meal.name}</h1>
+                <h4 >Ingredients</h4>
                 <div className='ingredients'>
                     {ingredients.map((ingredient, index) => (
                         <span key={index}>
-                            <MdCheckBox />
+                            <i class="far fa-check-square check-box"></i> 
                             {measure[index]} {ingredient}
                         </span>
                     ))}
