@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto Mono', monospace;
   margin: 2rem;
   background-color: #EDCDBB;
 }
@@ -35,6 +35,7 @@ body {
   height: 12rem;
   width: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .card-title {
@@ -80,7 +81,7 @@ a {
 
 .img-info {
   width: 100%;
-  height: 40%;
+  height: 45%;
   margin: 0 auto;
 }
 
@@ -103,4 +104,25 @@ a {
 .check-box {
   margin-right: 10px;
   background-color: green;
+}
+
+.navbar > * {
+  padding: 0;
+  background-color:#E3B7A0;
+}
+
+.bg-light {
+  padding: 0;
+}
+
+.btn {
+  background-color: rgb(202, 219, 177) ;
+}
+
+.Heading {
+  background-color: rgb(255, 217, 0);
+  padding : 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(27, 21, 5);
 }
